@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quitzy - Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/src/output.css" rel="stylesheet">
+</head>
+<body class="bg-teks px-6 py-4">
+    <main class="mt-24 container mx-auto px-4">
+        <div class="max-w-2xl mx-auto">
+            <h1 class="text-3xl font-bold mb-8 text-center">Quiz Time!</h1>
+            
+            <!-- Quiz Container -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <!-- Question Number -->
+                <div class="text-sm text-gray-600 mb-4">Question 1 of 2</div>
+                
+                <!-- Question -->
+                <div class="text-xl font-semibold mb-6">Apa yang dimaksud dengan aset pelengkap dalam konteks sistem informasi?</div>
+                
+                <!-- Options -->
+                <div class="space-y-4">
+                    <button class="answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-[#82C596] transition-colors">
+                        A. Data yang belum terstruktur dengan baik
+                    </button>
+                    <button class="answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-[#82C596] transition-colors">
+                        B. Hanya perangkat keras tanpa perangkat lunak
+                    </button>
+                    <button class="answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-[#82C596] transition-colors">
+                        C. Sumber daya yang menambah nilai pada sistem informasi
+                    </button>
+                    <button class="answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 hover:border-[#82C596] transition-colors">
+                        D. Teknologi yang tidak lagi relevan
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fill in the Blank Question Container -->
+            <div id="fill-in-question" class="bg-white rounded-lg shadow-lg p-6 mb-6 hidden">
+                <!-- Question Number -->
+                <div class="text-sm text-gray-600 mb-4">Question 2 of 10</div>
+                
+                <!-- Question Type Badge -->
+                <div class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mb-4">
+                    Isian
+                </div>
+                
+                <!-- Question -->
+                <div class="text-xl font-semibold mb-6">
+                    Bagaimana proses pengolahan data menjadi informasi dapat membantu dalam pengambilan keputusan?!
+                </div>
+                
+                <!-- Text Input -->
+                <div class="space-y-2">
+                    <textarea 
+                        class="w-full p-4 rounded-lg border-2 border-gray-200 focus:border-[#82C596] focus:ring-0 transition-colors min-h-[120px] resize-y"
+                        placeholder="Ketik jawaban Anda di sini..."></textarea>
+                    <div class="text-sm text-gray-500">
+                        Minimal 50 karakter
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between mt-6">
+                <button class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                    Previous
+                </button>
+                <button class="bg-[#82C596] text-white px-6 py-2 rounded-lg hover:bg-[#6BAF7F] transition-colors" id="next-btn" disabled>
+                    Next
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
